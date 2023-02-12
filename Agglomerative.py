@@ -6,6 +6,9 @@ import numpy as np
 import re
 import gensim
 from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.feature_extraction.text import ENGLISH_STOP_WORDS
+
+
 
 
 #load english dictionary for spacy
@@ -181,6 +184,8 @@ def multiple_fit_predict_iter(dataframe, iteration_checks=20):
     iteration_count=1
     while tempo_df.shape[0] != 0:
         
+        
+        x = df['prediction'].max()#max number prediction values 
         
         
         new_similar_ratio = d_similar.shape[0]/df.shape[0] #to know the proportion for the entire dataset that is similar
