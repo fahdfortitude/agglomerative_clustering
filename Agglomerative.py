@@ -151,7 +151,7 @@ def check_or_predict_again(df, x_indices):
 
 # d.groupby('prediction').apply(_try_return_dataframe).reset_index(drop=True).set_index('index')
 
-def multiple_fit_predict_iter(dataframe, iteration_checks=20):
+def agglomerative_model(dataframe, iteration_checks=20):
     
     """
     This is the main Agglemartive functions, the only custom hyperparameter is
